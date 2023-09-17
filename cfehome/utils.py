@@ -14,7 +14,7 @@ def validate_date_str(date_text):
     return date_text
 
 def load_movie_data(limit=1):
-    with open(MOVIE_METADATA_CSV, newline='') as csvfile:
+    with open(MOVIE_METADATA_CSV,encoding="cp437",  newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         dataset = []
         for i, row in enumerate(reader):
